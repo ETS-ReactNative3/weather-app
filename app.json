@@ -1,0 +1,14 @@
+{
+	"name": "weather-app-t",
+	"displayName": "weather-app-t",
+	"expo": {
+		"name": "weather-app-t",
+		"slug": "weather-app-t",
+		"version": "1.0.0",
+		"assetBundlePatterns": ["**/*"],
+		"android": { "package": "com.svariable.weatherappt" },
+		"extra": {
+			"appkey": "[secret here]"
+		}
+	}
+}
