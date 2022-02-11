@@ -16,4 +16,4 @@ expo start
 
 #### Screen Shots
 
-![Alt text](./screenshot.png?raw=true "Screenshot of App")
+<img src="./screenshot.png" alt="Home Screen" width="320"/> <img src="./screenshot_2.png" alt="Search Screen" width="320"/>

@@ -77,3 +77,4 @@ misc/indexer.js
 
 .env
 app.json
+*.sh
