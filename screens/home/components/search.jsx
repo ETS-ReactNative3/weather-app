@@ -144,14 +144,17 @@ export default function Search({
 							</TouchableOpacity>
 						</View>
 						{/* THis will use device location for weather */}
-						<Button
-							title="Use My Location"
+						<TouchableOpacity
 							onPress={() => {
 								setFullScreen(false);
 								locationCallback();
 								setSearchTerm("");
 							}}
-						/>
+						>
+							<View style={styles.locationButton}>
+								<Text style={styles.locationButtonText}>Use My Location</Text>
+							</View>
+						</TouchableOpacity>
 						{error ? <Text style={styles.error}>{error}</Text> : null}
 						{/* the autosuggestion */}
 						{suggestions?.map((suggestion, index) => {
@@ -166,7 +169,6 @@ export default function Search({
 										setFullScreen(false);
 									}}
 								>
-									{" "}
 									{suggestion?.name}, {suggestion?.countryLong}
 								</Text>
 							);
@@ -197,6 +199,7 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 16,
 		paddingVertical: 12,
 		fontFamily: "Roboto_400Regular",
+		color: "#202124",
 		fontSize: 14,
 	},
 	searchBox: {
@@ -204,6 +207,7 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 16,
 		paddingVertical: 8,
 		borderBottomColor: "#eee",
+		color: "#000",
 	},
 	searchButton: {
 		height: 24,
@@ -212,6 +216,16 @@ const styles = StyleSheet.create({
 		padding: 0,
 		marginTop: "auto",
 		marginBottom: "auto",
+	},
+	locationButton: {
+		backgroundColor: "#466588",
+		height: 40,
+		justifyContent: "center",
+	},
+	locationButtonText: {
+		color: "#fff",
+		fontSize: 16,
+		textAlign: "center",
 	},
 	searchButtonContainer: {
 		width: 50,

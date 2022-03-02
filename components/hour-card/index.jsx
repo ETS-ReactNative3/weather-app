@@ -17,32 +17,36 @@ export default function HourCard({ weather, time, temperature, current }) {
 				}}
 			/>
 			<Text style={[styles.textCenter, styles.textTemperature, current ? styles.activeText : {}]}>{temperature}</Text>
-			<Text style={[styles.textCenter, styles.text, current ? styles.activeText : {}]}>{time}</Text>
+			<Text style={[styles.textCenter, styles.text, current ? styles.activeText : {}, styles.time]}>{time}</Text>
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
 	card: {
-		height: 112,
-		width: 84,
+		height: 122,
+		width: 96,
 		backgroundColor: "#FFFFFF",
 		borderRadius: 10,
-		paddingVertical: 16,
-		paddingHorizontal: 8,
+		paddingVertical: 20,
+		paddingHorizontal: 12,
 		marginRight: 16,
+		alignItems: "center",
 	},
 	text: {
 		color: "#A0A2A9",
 		fontFamily: "Roboto_400Regular",
+	},
+	time: {
+		fontSize: 14,
 	},
 	activeText: {
 		// color: "#3083FF",
 		color: "#466588",
 	},
 	textTemperature: {
-		fontSize: 18,
-		fontWeight: "700",
+		fontSize: 24,
+		fontWeight: "600",
 		color: "#696E79",
 		fontFamily: "Roboto_700Bold",
 	},

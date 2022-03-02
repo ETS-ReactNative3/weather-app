@@ -27,9 +27,7 @@ const Col = ({ title, value, other = "", emphasis = false }) => (
 	<View style={styles.cardContentColumn}>
 		<Text style={[styles.text, emphasis ? styles.columnMainHeader : {}]}>{title}</Text>
 		<View style={styles.row}>
-			<Text style={[styles.text, styles.columnValue, other && other != "" ? styles.columnValueEmphasis : {}]}>
-				{value}
-			</Text>
+			<Text style={[styles.text, styles.columnValue, other ? styles.columnValueEmphasis : {}]}>{value}</Text>
 			{other ? <Text style={[styles.text, styles.columnValue, styles.columnValueLowEmphasis]}>{other}</Text> : <></>}
 		</View>
 	</View>
@@ -65,7 +63,7 @@ const styles = StyleSheet.create({
 	},
 	columnValue: {
 		fontWeight: "700",
-		fontSize: 14,
+		fontSize: 18,
 		color: "#575960",
 		height: "100%",
 	},
@@ -77,6 +75,7 @@ const styles = StyleSheet.create({
 	columnValueLowEmphasis: {
 		fontWeight: "400",
 		color: "#B8B8B8",
+		fontSize: 14,
 	},
 	columnMainHeader: {
 		fontSize: 14,

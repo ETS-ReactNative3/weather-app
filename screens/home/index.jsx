@@ -228,7 +228,7 @@ export default function Home() {
 						</View>
 						<View style={styles.forecast}>
 							<View style={[styles.textMargin]}>
-								<Text style={[styles.text, styles.textMargin]}>Hourly</Text>
+								<Text style={[styles.text, styles.textMargin, styles.header]}>Hourly</Text>
 								{weatherForecast?.timezone ? (
 									<FlatList
 										nestedScrollEnabled
@@ -255,7 +255,7 @@ export default function Home() {
 								)}
 							</View>
 							<View>
-								<Text style={[styles.text, styles.textMarginTop, styles.textMargin]}>Next 7 Days</Text>
+								<Text style={[styles.text, styles.textMarginTop, styles.textMargin, styles.header]}>Next 7 Days</Text>
 
 								{weatherForecast?.timezone ? (
 									weatherForecast?.daily?.slice(1)?.map((item, ind) => {
@@ -323,6 +323,12 @@ const styles = StyleSheet.create({
 		shadowRadius: 0.3 * 5,
 		shadowColor: "#000",
 		shadowOffset: { width: 0, height: 4 },
+	},
+	header: {
+		fontSize: 20,
+		marginTop: 16,
+		marginBottom: 12,
+		fontWeight: "600",
 	},
 	headerImage: {
 		resizeMode: "stretch",

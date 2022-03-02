@@ -80,7 +80,7 @@ async function openDatabase() {
 
 // get useer loccation
 const getLocation = async () => {
-	let { status } = await Location.requestPermissionsAsync();
+	let { status } = await Location.requestForegroundPermissionsAsync();
 	if (status !== "granted") {
 		// setErrorMsg("Permission to access location was denied");
 		return;
